@@ -58,7 +58,7 @@ class Target(object):
         If the target is not of type "page" or "background_page", return
         ``None``.
         """
-        if (self._targetInfo['type'] in ['page', 'background_page'] and
+        if (self._targetInfo['type'] in ['page', 'background_page', 'other'] and
                 self._page is None):
             client = await self._sessionFactory()
             new_page = await Page.create(
